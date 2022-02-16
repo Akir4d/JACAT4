@@ -1,0 +1,1 @@
+Stock info.txt as upgrade results here

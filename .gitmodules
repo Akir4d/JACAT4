@@ -1,0 +1,9 @@
+[submodule "sources/AdminLTE"]
+	path = sources/AdminLTE
+	url = https://github.com/ColorlibHQ/AdminLTE.git
+[submodule "sources/ionIcons"]
+	path = sources/ionIcons
+	url = https://github.com/ionic-team/ionicons.git
+[submodule "sources/groceryCrud"]
+	path = sources/groceryCrud
+	url = https://github.com/scoumbourdis/grocery-crud-codeigniter-4.git
