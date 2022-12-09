@@ -68,6 +68,7 @@ abstract class JacatController extends BaseController
 	protected $mUserGroups = [];
 	protected $mUserMainGroup;
 
+    protected $locale = 'en';
 
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
 	{
@@ -338,7 +339,7 @@ abstract class JacatController extends BaseController
 		$this->mScripts =$config->scripts;
 		$this->mStylesheets = $config->styleSheets;
 		$this->mPageAuth = $config->pageAuth;
-
+        $this->locale = $this->request->getLocale();
 
 		// restrict pages
         /* Will be changed with 

@@ -42,6 +42,4 @@
 		<?php endforeach; ?>
 	</ul>
 
-	<?php   echo view('_partials/language_switcher'); ?>
-
 </div>
