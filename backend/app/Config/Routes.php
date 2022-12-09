@@ -44,6 +44,8 @@ $routes->setAutoRoute(true);
 // AOP: This will modify Angular's base url so that it may be redistributed everywhere.
 $routes->get('/', 'Home::getIndex');
 
+service('auth')->routes($routes);
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -32,12 +32,12 @@ abstract class JacatController extends BaseController
     protected $helpers = ['inflector', 'custom_string'];
 
     // Config values from config/jacat.php
-    protected $mConfig = array();
-	protected $mBaseUrl = array();
+    protected $mConfig = [];
+	protected $mBaseUrl = [];
 	protected $mSiteName = '';
-	protected $mMetaData = array();
-	protected $mScripts = array();
-	protected $mStylesheets = array();
+	protected $mMetaData = [];
+	protected $mScripts = [];
+	protected $mStylesheets = [];
 
     // Values to be obtained automatically from router
 
@@ -353,8 +353,13 @@ abstract class JacatController extends BaseController
 		$this->mConfig = $config;
 	}
 
-    // Render template
-	protected function render($view_file, $layout = 'default')
+    /**
+     * Summary of render
+     * @param mixed $view_file
+     * @param mixed $layout
+     * @return string
+     */
+	protected function render($view_file, $layout = 'default'): string
 	{
 		// automatically generate page title
 		if (empty($this->mPageTitle)) {
@@ -402,15 +407,10 @@ abstract class JacatController extends BaseController
 		//}
 		
 		$this->mViewData['inner_view'] = $view_file;
-		echo view('_base/head', $this->mViewData);
-		echo view('_layouts/' . $layout, $this->mViewData);
-
-		// debug tools - display view data
-		//if (ENVIRONMENT === 'development' && !empty($debug_config) && !empty($debug_config['view_data'])) {
-			//$this->output->append_output('<hr/>' . print_r($this->mViewData, TRUE));
-		//}
-
-		echo view('_base/foot', $this->mViewData);
+		$collect = view('_base/head', $this->mViewData);
+		$collect .= view('_layouts/' . $layout, $this->mViewData);
+		$collect .= view('_base/foot', $this->mViewData);
+        return $collect;
 	}
 
 }
