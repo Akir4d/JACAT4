@@ -72,6 +72,8 @@ abstract class JacatController extends BaseController
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
 	{
 		parent::initController($request, $response, $logger);
+        //Check DB
+        $this->checkDb();
 		$router = \CodeIgniter\Config\Services::router(); 
 		// router info
 		$this->mCtrler = $router->controllerName();

@@ -156,7 +156,7 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-cache/*
+backend/cache
 
 # System files
 .DS_Store
