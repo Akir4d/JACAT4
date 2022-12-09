@@ -1,0 +1,26 @@
+{
+    "name": "akir4d/aop",
+    "type": "project",
+    "description": "Angular on php",
+    "homepage": "https://github.com/Akir4d/angular_on_php",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "codeigniter4/framework": "^4.2",
+        "firebase/php-jwt": "^6.3"
+    },
+    "suggest": {
+        "ext-fileinfo": "Improves mime type detection for files"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "support": {
+        "source": "https://github.com/Akir4d/angular_on_php"
+    }
+}
