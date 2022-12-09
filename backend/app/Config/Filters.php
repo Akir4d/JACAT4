@@ -22,8 +22,7 @@ class Filters extends BaseConfig
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
-        'aop' => \App\Filters\Aop::class
+        'secureheaders' => SecureHeaders::class
     ];
 
     /**
@@ -34,7 +33,6 @@ class Filters extends BaseConfig
      */
     public $globals = [
         'before' => [
-            'aop',
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',

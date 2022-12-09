@@ -2,9 +2,9 @@
 
 namespace App\Controllers\Api;
 
-use App\Controllers\AopBaseController;
+use App\Controllers\JacatController;
 
-abstract class ABaseApi extends AopBaseController
+abstract class ABaseApi extends JacatController
 {
 
 }
