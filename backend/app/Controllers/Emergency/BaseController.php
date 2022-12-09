@@ -185,7 +185,7 @@ abstract class BaseController extends Controller
      */
     protected function aopPreRender(string $module, string $returnPath, array $arguments = []): object
     {
-        $config = new \Config\Aop();
+        $config = new \Config\Emergency\Emergency();
         $du = $config->develCi;
         $file = FCPATH . "amodules/$module/index.html";
         $moduleData = "";

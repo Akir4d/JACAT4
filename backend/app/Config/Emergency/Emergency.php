@@ -19,4 +19,7 @@ class Emergency extends BaseConfig
         'username' => 'username hash goes here or inside .env file',
         'password' => 'password hash goes here or inside .env file'
     ];
+
+    public $develCi = 'http://localhost:8085';
+    public $develAn = 'http://localhost:4200';
 }
