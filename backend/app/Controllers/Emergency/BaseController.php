@@ -132,7 +132,7 @@ abstract class BaseController extends Controller
         $status = (object) ['message' => '', 'error' => false, 'debug' => ''];
         try {
             $migrate = \Config\Services::migrations();
-        } catch (\Throwable$e) {
+        } catch (\Throwable $e) {
             $status->message = "Db Connection Error";
             $status->error = true;
             $status->debug = $e;
@@ -140,7 +140,7 @@ abstract class BaseController extends Controller
         if ($migrate !== null) {
             try {
                 $migrate->latest();
-            } catch (\Throwable$e) {
+            } catch (\Throwable $e) {
                 $status->message = "Db Update Error";
                 $status->error = true;
                 $status->debug = $e;
@@ -159,7 +159,7 @@ abstract class BaseController extends Controller
         } 
 
         if (password_verify('admin', $log->login['password'])) {
-            $status->message = "Emergency console password is set to default Admin, change it!";
+            $status->message = "Emergency console password is set to default, change it!";
             $status->error = true;
         }
         return $status;
