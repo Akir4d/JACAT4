@@ -10,4 +10,5 @@ class Home extends JacatController
         return $this->render('home', 'full_width');
     }
 
+
 }

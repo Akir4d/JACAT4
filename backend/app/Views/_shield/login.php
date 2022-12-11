@@ -56,11 +56,11 @@
                     </div>
 
                     <?php if (setting('Auth.allowMagicLinkLogins')) : ?>
-                        <p class="text-center"><?= lang('Auth.forgotPassword') ?> <a href="<?= url_to('magic-link') ?>"><?= lang('Auth.useMagicLink') ?></a></p>
+                        <p class="text-center"><?= lang('Auth.forgotPassword') ?> <a href="<?= base_url('magic-link') ?>"><?= lang('Auth.useMagicLink') ?></a></p>
                     <?php endif ?>
 
                     <?php if (setting('Auth.allowRegistration')) : ?>
-                        <p class="text-center"><?= lang('Auth.needAccount') ?> <a href="<?= url_to('register') ?>"><?= lang('Auth.register') ?></a></p>
+                        <p class="text-center"><?= lang('Auth.needAccount') ?> <a href="<?= base_url('register') ?>"><?= lang('Auth.register') ?></a></p>
                     <?php endif ?>
 
                 </form>

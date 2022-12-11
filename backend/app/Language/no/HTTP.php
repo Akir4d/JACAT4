@@ -64,7 +64,6 @@ return [
     'uploadErrOk'        => 'Filen ble lastet opp.',
     'uploadErrIniSize'   => 'Filen "%s" overstiger upload_max_filesize ini.',
     'uploadErrFormSize'  => 'Filen "%s" overstiger opplastingsgrensen definert i form.',
-    'uploadErrFormSize'  => 'Filen "%s" er større enn grensen satt i skjemaet',
     'uploadErrPartial'   => 'Filen "%s" ble bare delvis lastet opp.',
     'uploadErrNoFile'    => 'Ingen filer ble lastet opp',
     'uploadErrCantWrite' => 'Filen "%s" kunne ikke lagres.',

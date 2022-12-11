@@ -349,7 +349,7 @@ class Auth extends ShieldAuth
     public function loginRedirect(): string
     {
         $url = setting('Auth.redirects')['login'];
-
+        
         return $this->getUrl($url);
     }
 
@@ -377,8 +377,11 @@ class Auth extends ShieldAuth
 
     protected function getUrl(string $url): string
     {
+        if(!empty($_GET) && array_key_exists('ret',$_GET)){
+            $url = urldecode($_GET['ret']); 
+        }
         return strpos($url, 'http') === 0
             ? $url
-            : rtrim(site_url($url), '/ ');
+            : base_url($url);
     }
 }

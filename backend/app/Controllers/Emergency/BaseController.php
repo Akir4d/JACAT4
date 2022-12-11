@@ -324,7 +324,7 @@ abstract class BaseController extends Controller
         $re = '/' . $quoted . '.*?\= (.*)/m';
         preg_match_all($re, $file, $matches, PREG_SET_ORDER, 0);
         if (empty($matches)) {
-            $file .= "$par = ".$value."\n";
+            $file .= "\n$par = ".$value;
         }
         return $file;
     }

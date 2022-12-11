@@ -62,6 +62,8 @@ abstract class JacatController extends BaseController
     // Data to pass into views
 	protected $mViewData = [];
 
+    protected $mModule = "";
+
 	// Login user
 	protected $mPageAuth = [];
 	protected $mUser = NULL;
