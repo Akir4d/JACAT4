@@ -151,7 +151,7 @@ abstract class BaseController extends Controller
 
     protected function checkCredentials(){
         $status = (object) ['message' => '', 'error' => false, 'debug' => ''];
-        $log = new \Config\Emergency\Emergency();
+        $log = new \Config\Emergency();
         if(strpos($log->login['password'], 'hash goes here')!==false){
             $status->message = "Login is disabled, check the .env file";
             $status->error = true;
@@ -185,7 +185,7 @@ abstract class BaseController extends Controller
      */
     protected function aopPreRender(string $module, string $returnPath, array $arguments = []): object
     {
-        $config = new \Config\Emergency\Emergency();
+        $config = new \Config\Emergency();
         $du = $config->develCi;
         $file = FCPATH . "amodules/$module/index.html";
         $moduleData = "";

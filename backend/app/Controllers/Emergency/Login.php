@@ -11,7 +11,7 @@ class Login extends BaseController
     public function postLogin()
     {
  
-        $log = new \Config\Emergency\Emergency();
+        $log = new \Config\Emergency();
         if ($json = $this->request->getJSON()) {
             $keys = array_keys((array) $json);
             foreach ($keys as $key) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Config\Emergency;
+namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
 
